@@ -3,5 +3,4 @@ export const healthCheck = (req, res) => {
         message:"hello",
         status: "ok"
     })
-    console.log(req);
 }
