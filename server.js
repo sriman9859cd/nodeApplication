@@ -9,7 +9,9 @@ dotenv.config();
 const app = express();
 
 // app.use() is used to register middleware (route modules), 
+app.use(express.json());
 app.use("/health", healthRoutes)
+app.use("/user", healthRoutes)
 
 const PORT = process.env.PORT
 

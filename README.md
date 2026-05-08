@@ -36,12 +36,13 @@ npm start
 ## express
 - Expresss is a runtime tool (dependency).
 - It is used to create APIs, handle routes, and manage server-side logic.
-## dotenv
+## dotenv 
+- version: 17.4.2
 - To keep sensitive data and configs separate from code.
 
 ## Db connection
-- mysql2
-- Sequelize(ORM)
+- mysql2--> version:3.22.3
+- Sequelize(ORM)--> version:6.37.8
 
 ### To Install sequelize CLI
 ```bash
@@ -86,3 +87,14 @@ It helps you:
 - modify columns
 - delete tables
 - keep database structure organized
+- Represents table structure/schema in database.
+## bcrypt 
+- version: 6.0.0
+- bcrypt converts plain password into encrypted hash.
+```bach
+npm install bcrypt
+```
+### Command To generate User Model
+```bash
+npx sequelize-cli model:generate --name User --attributes name:string,email:string,password:string
+```
