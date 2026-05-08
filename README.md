@@ -98,3 +98,6 @@ npm install bcrypt
 ```bash
 npx sequelize-cli model:generate --name User --attributes name:string,email:string,password:string
 ```
+### JSON web Token
+-- version: 9.0.3
+

@@ -1,7 +1,7 @@
 
 import express from "express"
 import dotenv from "dotenv"
-import healthRoutes from "./routes/healthRoutes.js"
+import healthRoutes from "./routes/userRoutes.js"
 
 // To reads the .env file and makes values (variables) available through
 dotenv.config();
