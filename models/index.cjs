@@ -8,7 +8,7 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 
 // Reads DB config
-const config = require(__dirname + '/../config/config.json')[env];
+const config = require(__dirname + '/../config/config.cjs')[env];
 
 const db = {};
 
@@ -32,7 +32,8 @@ fs
     );
   })
   .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    const fun = require(path.join(__dirname, file))
+    const model = fun(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
 
